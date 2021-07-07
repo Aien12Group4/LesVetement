@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+data/polyvore/images/
+data/polyvore/dataset/

@@ -1,0 +1,2 @@
+model_checkpoint_path: "compatibilitygae.ckpt-4000"
+all_model_checkpoint_paths: "compatibilitygae.ckpt-4000"
