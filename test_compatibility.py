@@ -125,6 +125,10 @@ def test_compatibility(args):
 
         prob_act = tf.nn.sigmoid
 
+        # Cooper
+        outputPath = './output.txt'
+        outputTXT = open(outputPath, 'w')
+
         K = args.k
         for outfit in dl.comp_outfits:
             before_item = time.time()
@@ -192,14 +196,18 @@ def test_compatibility(args):
             pred = sess.run(prob_act(model.outputs), feed_dict=new_feed_dict)
 
             predicted_score = pred.mean()
-            print("[{}] Mean scores between outfit: {:.4f}, label: {}".format(count, predicted_score, score))
+            
+            # Cooper
+            outputTXT.write("[{}] Mean scores between outfit: {}, label: {}".format(count, predicted_score, score))
+            
+            print("[{}] Mean scores between outfit: {}, label: {}".format(count, predicted_score, score))
             # TODO: remove this print
             print("Total Elapsed: {:.4f}".format(time.time() - before_item))
             count += 1
 
             preds.append(predicted_score)
             labels.append(score)
-
+            # for end
         preds = np.array(preds)
         labels = np.array(labels)
 
@@ -215,6 +223,9 @@ def test_compatibility(args):
 
     print("mean positive prediction: {}".format(preds[labels.astype(bool)].mean()))
     print("mean negative prediction: {}".format(preds[np.logical_not(labels.astype(bool))].mean()))
+    
+    # Cooper
+    outputTXT.close()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

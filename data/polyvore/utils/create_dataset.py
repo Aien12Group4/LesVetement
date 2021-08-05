@@ -142,5 +142,5 @@ def create_test(resampled=False):
         json.dump(outfits, f)
 
 if args.phase == 'test':
-    create_test(False)
-    create_test(True)
+   create_test(False)
+   create_test(True)

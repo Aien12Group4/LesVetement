@@ -20,7 +20,7 @@ import pickle as pkl
 import json
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--phase', default='train', choices=['train', 'test', 'valid'])
+parser.add_argument('--phase', default='train', choices=['train', 'test', 'valid', 'uniqlo'])
 args = parser.parse_args()
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -79,9 +79,10 @@ n_items = len(ids.keys())
 with torch.no_grad(): # it is the same as volatile=True for versions before 0.4
     for id in ids:
         outfit_id, index = ids[id].split('_') # outfitID_index
-
         image_path = images_path + outfit_id + '/' + '{}.jpg'.format(index)
+        #print(image_path)
         assert os.path.exists(image_path)
+        
 
         im = skimage.io.imread(image_path)
         if len(im.shape) == 2:

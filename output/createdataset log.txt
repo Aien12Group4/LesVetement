@@ -1,0 +1,12 @@
+(VisualCompatibility) E:\Projects\Outfit-Recommendation-System\data\polyvore\utils>python mkdataset_nofitb.py --phase test
+Filling the values of the sparse adj matrix
+Done!
+Sparse density: 0.02279123414071511
+There are 201 outfits to test compatibility
+There are 100 test outfits.
+../dataset/compatibility_test.json
+E:\Projects\Outfit-Recommendation-System\data\polyvore\utils\resample_compat.py:47: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  base = np.random.choice(valid_outfits) # choose a valid outfit to copy its categories
+There are 201 outfits to test compatibility
+There are 100 test outfits.
+../dataset/compatibility_RESAMPLED_test.json

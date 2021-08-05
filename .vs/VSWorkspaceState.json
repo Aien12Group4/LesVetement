@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\data",
+    "\\dataloaders",
+    "\\data\\polyvore",
+    "\\data\\polyvore\\jsons",
+    "\\data\\polyvore\\utils",
+    "\\model"
+  ],
+  "SelectedNode": "\\model\\CompatibilityGAE.py",
+  "PreviewInSolutionExplorer": false
+}
