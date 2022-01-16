@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 data/polyvore/images/
 data/polyvore/dataset/
+data/polyvore/jsons/backup/fill_in_blank_test.json
+data/polyvore/jsons/backup/fill_in_blank_test_RESAMPLED.json
